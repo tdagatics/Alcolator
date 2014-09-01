@@ -31,8 +31,8 @@
     UITextField *textField = [[UITextField alloc] init];
     UISlider *slider = [[UISlider alloc] init];
     UILabel *label = [[UILabel alloc] init];
-    UIButton *button = [[UIButton alloc] init];
-    //UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    //UIButton *button = [[UIButton alloc] init];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
     
     // Add each view and the gesture recognizer as the view's subviews
@@ -49,6 +49,7 @@
     self.calculateButton = button;
     self.hideKeyboardTapGestureRecognizer = tap;
 }
+
 - (void)viewDidLoad
 {
     // Calls the supperclass's implementation
@@ -56,13 +57,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // Set our primary view's background color to lightGrayColor
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor blackColor];
     
     // Tells the text field that 'self', this instance of 'ViewController' should be treated as the textfield's delegate
+    self.beerPercentTextField.backgroundColor = [UIColor whiteColor];
     self.beerPercentTextField.delegate = self;
     
     // Set the placeholder text
+    self.beerPercentTextField.textColor = [UIColor lightGrayColor];
     self.beerPercentTextField.placeholder = NSLocalizedString(@"% Alcohol Content Per Beer", @"Beer percent placeholder text");
+    
 
     // Tells 'self.beerCountSlider' that when its value changed, it should call '[self -sliderValueDidChange:]'.
     // This is equivalent to connecting the IBAction in our previous checkpoint
@@ -83,26 +87,28 @@
     
     // Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
+    self.resultLabel.textColor = [UIColor whiteColor];
 }
 
 - (void) viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
     CGFloat viewWidth = 320;
-    CGFloat padding = 20;
-    CGFloat itemWidth = viewWidth - padding - padding;
-    CGFloat itemHeight = 44;
+    CGFloat beerTextFieldPadding = 90;
+    CGFloat padding2 = 20;
+    CGFloat itemWidth = viewWidth - padding2 - padding2;
+    CGFloat itemHeight = 40;
     
-    self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame = CGRectMake(padding2, beerTextFieldPadding, itemWidth, itemHeight);
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
-    self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding, itemWidth, itemHeight);
+    self.beerCountSlider.frame = CGRectMake(padding2, bottomOfTextField + padding2, itemWidth, itemHeight);
     
     CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
-    self.resultLabel.frame = CGRectMake(padding, bottomOfSlider + padding, itemWidth, itemHeight * 4);
+    self.resultLabel.frame = CGRectMake(padding2, bottomOfSlider + padding2, itemWidth, itemHeight * 4);
     
     CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
-    self.calculateButton.frame = CGRectMake(padding, bottomOfLabel + padding, itemWidth, itemHeight);
+    self.calculateButton.frame = CGRectMake(padding2, bottomOfLabel + padding2, itemWidth, itemHeight);
     
 }
 
