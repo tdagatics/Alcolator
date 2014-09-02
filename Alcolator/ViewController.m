@@ -57,6 +57,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // Set our primary view's background color to lightGrayColor
+    self.title = NSLocalizedString(@"Wine", @"wine"); // Set viewController's title
     self.view.backgroundColor = [UIColor blackColor];
     
     // Tells the text field that 'self', this instance of 'ViewController' should be treated as the textfield's delegate

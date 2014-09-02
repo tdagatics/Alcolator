@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
+#import "MainMenuViewController.h"
 #import "AppDelegate.h"
 #import "ViewController.h"
 
@@ -15,8 +16,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    ViewController *viewController = [[ViewController alloc] init];
-    self.window.rootViewController = viewController;
+    //ViewController *viewController = [[ViewController alloc] init];
+    //self.window.rootViewController = viewController;
+    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;

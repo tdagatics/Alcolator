@@ -21,6 +21,7 @@
 		43776F4919B1F681008166C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43776F4719B1F681008166C2 /* InfoPlist.strings */; };
 		43776F4B19B1F681008166C2 /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43776F4A19B1F681008166C2 /* AlcolatorTests.m */; };
 		438ACC2A19B4AAF1000A95B8 /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438ACC2919B4AAF1000A95B8 /* WhiskeyViewController.m */; };
+		439203B319B577D300379EA9 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439203B219B577D300379EA9 /* MainMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		43776F4A19B1F681008166C2 /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
 		438ACC2819B4AAF1000A95B8 /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
 		438ACC2919B4AAF1000A95B8 /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
+		439203B119B577D300379EA9 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		439203B219B577D300379EA9 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 		43776F1319B1F681008166C2 = {
 			isa = PBXGroup;
 			children = (
+				439203B119B577D300379EA9 /* MainMenuViewController.h */,
+				439203B219B577D300379EA9 /* MainMenuViewController.m */,
 				438ACC2819B4AAF1000A95B8 /* WhiskeyViewController.h */,
 				438ACC2919B4AAF1000A95B8 /* WhiskeyViewController.m */,
 				43776F2519B1F681008166C2 /* Alcolator */,
@@ -254,6 +259,7 @@
 				438ACC2A19B4AAF1000A95B8 /* WhiskeyViewController.m in Sources */,
 				43776F3019B1F681008166C2 /* AppDelegate.m in Sources */,
 				43776F2C19B1F681008166C2 /* main.m in Sources */,
+				439203B319B577D300379EA9 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
